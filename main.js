@@ -9,8 +9,8 @@ let mainWindow;
 // 创建窗体
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 900,
-    height: 600,
+    width: 1200,
+    height: 800,
     useContentSize: true,
     frame: true,
   });
