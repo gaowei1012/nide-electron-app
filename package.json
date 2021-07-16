@@ -8,16 +8,17 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.16.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "PORT=3890 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "PORT=3890 react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "electron": "electron .",
     "dev": "concurrently \"wait-on http://localhost:3890 && electron .\" \"cross-env BROWSER=none npm start\""
   },
@@ -40,10 +41,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "babel-plugin-import": "^1.13.3",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "customize-cra": "^1.0.0",
     "electron": "^13.1.7",
     "electron-is-dev": "^2.0.0",
-    "cross-env": "^7.0.2",
-    "concurrently": "^5.2.0",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewired": "^2.1.6",
     "wait-on": "^5.0.0"
   }
 }
