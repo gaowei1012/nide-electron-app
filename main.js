@@ -1,12 +1,15 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Notification } = require("electron");
 const isDev = require("electron-is-dev");
 const path = require("path");
 
+const { notification } = require('./config')
+
 let mainWindow;
 
+// 创建窗体
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
+    width: 900,
     height: 600,
     useContentSize: true,
     frame: true,
@@ -22,6 +25,13 @@ function createWindow() {
     mainWindow = null
   });
 }
+
+// 通知窗体
+function showNotification() {
+  new Notification({ title: notification.title, body: notification.content }).show()
+}
+
+app.on('ready', showNotification);
 
 app.on("ready", createWindow);
 
