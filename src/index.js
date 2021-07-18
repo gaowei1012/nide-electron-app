@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import zh_CN from 'antd/lib/locale/zh_CN'
 import reportWebVitals from './reportWebVitals'
 import { ConfigProvider } from 'antd'
-import App from './App'
+import App from './app'
 import '@/style/base.scss'
 
 ReactDOM.render(
