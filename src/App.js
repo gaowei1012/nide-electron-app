@@ -1,6 +1,5 @@
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import loadable from './utils/loadable'
-import React, { useEffect } from 'react'
 
 import 'animate.css'
 import './style/base.scss'
